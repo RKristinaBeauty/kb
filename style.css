@@ -100,7 +100,7 @@ ul.contact--socials {
     text-decoration: none; /* Elimină sublinierea */
 }
 .header2 nav ul li a:active {
-    color: #696969!important;
+    color: #696969!important!important;
 }
 .header2 nav ul li a:hover {
     color: #696969;
