@@ -103,7 +103,7 @@ ul.contact--socials {
     color: #696969!important!important;
 }
 .header2 nav ul li a:hover {
-    color: #696969;
+    color: #696969!important;
 }
 
 /* Zona 3: Link sau alte informații */
