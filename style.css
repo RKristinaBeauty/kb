@@ -257,12 +257,10 @@ ul.contact--socials {
 .contact a {
     color: #000000!important;
     text-decoration: none!important;
-    font-weight: bolder;
 }
 .contact a:hover {
     color: #696969!important;
     text-decoration: none!important;
-    font-weight: bolder;
 }
 ***********************************
 .flex-container {
