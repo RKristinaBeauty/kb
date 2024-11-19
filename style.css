@@ -421,24 +421,6 @@ ul.contact--socials {
         line-height: 1.8;
         margin-right: 20px;
     }
-    .flex-container4 {
-        margin: 0;
-        display: flow!important;
-    }
-    .image-container4 {
-        width: auto;
-        margin-top: 30px;
-        margin-left: auto;
-}
-    .text-container4 {
-        font-size: 16px;
-        position: relative;
-        width: auto;
-        margin-top: 0;
-        margin-left: 20px;
-        line-height: 1.8;
-        margin-right: 20px;
-    }
     .header1 {
         width: 60%;
     }
@@ -447,7 +429,7 @@ ul.contact--socials {
     width: 80%;
     }
 }
-.flex-container4  {
+.flex-container4 {
     margin: 50px 200px; /* Spațiu exterior */
 }
 #galerie {
@@ -520,4 +502,3 @@ Menu hamburger
         order: 2;
     }
 }
-
