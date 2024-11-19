@@ -374,7 +374,7 @@ ul.contact--socials {
         width: auto;
         margin-top: 30px;
         margin-left: auto;
-}
+    }
     .text-container1 {
         font-size: 16px;
         position: relative;
@@ -393,7 +393,7 @@ ul.contact--socials {
         width: auto;
         margin-top: 30px;
         margin-left: auto;
-}
+    }
     .text-container2 {
         font-size: 16px;
         position: relative;
@@ -411,7 +411,7 @@ ul.contact--socials {
         width: auto;
         margin-top: 30px;
         margin-left: auto;
-}
+    }
     .text-container3 {
         font-size: 16px;
         position: relative;
@@ -429,7 +429,7 @@ ul.contact--socials {
         width: auto;
         margin-top: 30px;
         margin-left: auto;
-}
+    }
     .text-container4 {
         font-size: 16px;
         position: relative;
@@ -457,9 +457,6 @@ ul.contact--socials {
     line-height: 1.8;
 }
 @media (max-width: 959px) {
-    .servicii {
-    margin: 20px;
-}
 #galerie {
     margin: 20px;
 }
