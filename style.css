@@ -340,6 +340,31 @@ ul.contact--socials {
      margin-left: 10%;
      line-height: 1.8;
 }
+.flex-container4 {
+    margin: 50px 200px; /* Spațiu exterior */
+    display: flex!important;
+    
+}
+.image-container4{
+    width: 36.7%;
+    margin-top: 30px;
+
+}
+.image-container4 img {
+    width: 100%; /* Imaginea se scalează pentru a ocupa 30% */
+    height: auto; /* Păstrează proporțiile imaginii */
+    position: relative;
+    margin-top: 30px;
+}
+
+.text-container4 {
+     font-size: 16px; /* Dimensiunea textului */
+     position: relative;
+     width: 57.8%;
+     margin-top: 30px;
+     margin-left: 10%;
+     line-height: 1.8;
+}
 @media (max-width: 959px) {
     .flex-container1 {
         margin: 0;
@@ -404,7 +429,7 @@ ul.contact--socials {
     width: 80%;
     }
 }
-.servicii {
+.flex-container4  {
     margin: 50px 200px; /* Spațiu exterior */
 }
 #galerie {
