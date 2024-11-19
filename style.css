@@ -440,31 +440,11 @@ Menu hamburger
 /* Meniul pe ecrane mici */
 @media screen and (max-width: 959px) {
     .menu {
-        display: none; /* Ascunde meniul inițial */
-        flex-direction: column;
-        background-color: #957620;
-        position: absolute;
-        top: 100%; /* Sub header */
-        right: 0;
-        left: 0;
-        padding: 10px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu ul li a {
-        font-size: 18px;
+        display: none;
     }
 
     .menu-toggle {
-        display: block; /* Afișează butonul hamburger */
-    }
-
-    .menu.active {
-        display: flex; /* Afișează meniul când este activ */
+        display: block;
     }
 }
 
