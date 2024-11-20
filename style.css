@@ -366,6 +366,53 @@ ul.contact--socials {
      margin-left: 10%;
      line-height: 1.8;
 }
+.flex-containe5 {
+    margin: 50px 200px; /* Spațiu exterior */
+    display: flex!important;
+    
+}
+.image-container5{
+    width: 36.7%;
+    margin-top: 50px;
+}
+.image-container5 img {
+    width: 100%; /* Imaginea se scalează pentru a ocupa 30% */
+    height: auto; /* Păstrează proporțiile imaginii */
+    position: relative;
+}
+.text-container5 {
+     font-size: 16px; /* Dimensiunea textului */
+     position: relative;
+     width: 57.8%;
+     margin-top: 50px;
+     margin-right: 10%;
+     line-height: 1.8;
+}
+.flex-container6 {
+    margin: 50px 200px; /* Spațiu exterior */
+    display: flex!important;
+    
+}
+.image-container6{
+    width: 36.7%;
+    margin-top: 30px;
+
+}
+.image-container6 img {
+    width: 100%; /* Imaginea se scalează pentru a ocupa 30% */
+    height: auto; /* Păstrează proporțiile imaginii */
+    position: relative;
+    margin-top: 30px;
+}
+
+.text-container6 {
+     font-size: 16px; /* Dimensiunea textului */
+     position: relative;
+     width: 57.8%;
+     margin-top: 30px;
+     margin-left: 10%;
+     line-height: 1.8;
+}
 @media (max-width: 959px) {
     .flex-container1 {
         margin: 0;
@@ -442,6 +489,43 @@ ul.contact--socials {
         margin-right: 20px;
         margin: 20px;
     }
+    .flex-container5 {
+        margin: 0;
+        display: flow!important;
+    }
+    .image-container5 {
+        width: auto;
+        margin-top: 30px;
+        margin-left: auto;
+    }
+    .text-container5 {
+        font-size: 16px;
+        position: relative;
+        width: auto;
+        margin-top: 0;
+        margin-left: 20px;
+        line-height: 1.8;
+        margin-right: 20px;
+    }
+    .flex-container6 {
+        margin: 0;
+        display: flex !important;
+        flex-direction: column;
+    }
+    .image-container6 {
+        width: auto;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .text-container6 {
+        font-size: 16px;
+        position: relative;
+        width: auto;
+        margin-top: 0;
+        margin-left: 20px;
+        line-height: 1.8;
+        margin-right: 20px;
+        margin: 20px;
     .header1 {
         width: 60%;
     }
