@@ -112,6 +112,7 @@ ul.contact--socials {
     margin: 0; /* Elimină marginea implicită */
     font-size: 24px; /* Ajustează dimensiunea titlului */
     color: #000000;
+    text-align: center;
 }
 .header2 nav ul {
     list-style: none; /* Elimină marcajele default ale listei */
