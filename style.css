@@ -658,6 +658,9 @@ Menu hamburger
     }
 }
 @media (max-width: 959px) {
+.w-100 {
+    width: auto!important;
+}
 .col-6 {
     flex: 0 0 auto;
     width: 50%;
