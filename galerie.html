@@ -106,59 +106,41 @@
         <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="close" id="closeLightbox">&times;</button>
-        <button class="prev" id="prevBtn">&#10094;</button>
+        <div class="side-nav left" id="leftNav"></div>
         <img src="" alt="Imagine mare" id="lightboxImage">
-        <button class="next" id="nextBtn">&#10095;</button>
+        <div class="side-nav right" id="rightNav"></div>
     </div>
+<style>
+    .side-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+</style>
 
          <script>
-        // Selectăm toate imaginile din galerie
-const galleryImages = document.querySelectorAll('.galerie-item img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightboxImage');
-const closeLightbox = document.getElementById('closeLightbox');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-// Array pentru a stoca sursele imaginilor
-let imagesArray = Array.from(galleryImages);
-let currentIndex = 0;
-
-// Deschidem lightbox-ul la click pe imagine
-galleryImages.forEach((image, index) => {
-    image.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImage.src = image.src;
-        currentIndex = index; // Stocăm indexul imaginii selectate
-    });
-});
-
-// Închidem lightbox-ul când se apasă butonul de închidere
-closeLightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-});
-
-// Navigăm la imaginea anterioară
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length; // Asigurăm că indexul rămâne între 0 și lungimea array-ului
-    lightboxImage.src = imagesArray[currentIndex].src;
-});
-
-// Navigăm la imaginea următoare
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % imagesArray.length;
-    lightboxImage.src = imagesArray[currentIndex].src;
-});
-
-// Închidem lightbox-ul când se face clic în afara imaginii
-lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImage && e.target !== closeLightbox) {
-        lightbox.style.display = 'none';
-    }
-});
-
-
-             
+                        // Navigăm la imaginea anterioară când se face clic pe partea stângă
+                document.getElementById('leftNav').addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+                    lightboxImage.src = imagesArray[currentIndex].src;
+                });
+                
+                // Navigăm la imaginea următoare când se face clic pe partea dreaptă
+                document.getElementById('rightNav').addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % imagesArray.length;
+                    lightboxImage.src = imagesArray[currentIndex].src;
+                });
     </script>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
