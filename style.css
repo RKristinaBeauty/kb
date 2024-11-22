@@ -658,9 +658,7 @@ Menu hamburger
     }
 }
 @media (max-width: 959px) {
-.w-100 {
-    width: auto!important;
-}
+
 .col-6 {
     flex: 0 0 auto;
     width: 50%;
@@ -685,4 +683,7 @@ Menu hamburger
 .btn:hover {
     background-color: #996600!important;
     border-color: #A15407!important;
+}
+.w-100 {
+    width: auto!important;
 }
