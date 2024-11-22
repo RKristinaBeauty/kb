@@ -113,30 +113,52 @@
 
          <script>
         // Selectăm toate imaginile din galerie
-        const galleryImages = document.querySelectorAll('.galerie-item img');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const closeLightbox = document.getElementById('closeLightbox');
+const galleryImages = document.querySelectorAll('.galerie-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const closeLightbox = document.getElementById('closeLightbox');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-        // Adăugăm evenimentul de clic pe fiecare imagine
-        galleryImages.forEach(image => {
-            image.addEventListener('click', () => {
-                lightbox.style.display = 'flex'; // Afișăm lightbox-ul
-                lightboxImage.src = image.src;  // Setăm sursa imaginii selectate
-            });
-        });
+// Array pentru a stoca sursele imaginilor
+let imagesArray = Array.from(galleryImages);
+let currentIndex = 0;
 
-        // Închidem lightbox-ul când se apasă butonul de închidere
-        closeLightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
+// Deschidem lightbox-ul la click pe imagine
+galleryImages.forEach((image, index) => {
+    image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = image.src;
+        currentIndex = index; // Stocăm indexul imaginii selectate
+    });
+});
 
-        // Închidem lightbox-ul când se face clic în afara imaginii
-        lightbox.addEventListener('click', (e) => {
-            if (e.target !== lightboxImage && e.target !== closeLightbox) {
-                lightbox.style.display = 'none';
-            }
-        });
+// Închidem lightbox-ul când se apasă butonul de închidere
+closeLightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
+
+// Navigăm la imaginea anterioară
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length; // Asigurăm că indexul rămâne între 0 și lungimea array-ului
+    lightboxImage.src = imagesArray[currentIndex].src;
+});
+
+// Navigăm la imaginea următoare
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % imagesArray.length;
+    lightboxImage.src = imagesArray[currentIndex].src;
+});
+
+// Închidem lightbox-ul când se face clic în afara imaginii
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImage && e.target !== closeLightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+
+
+             
     </script>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
