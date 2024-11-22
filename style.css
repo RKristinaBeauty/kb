@@ -10,7 +10,14 @@ body {
     max-width: 100%!important
 }
 ***********************************************
+hr {
+    border: none; /* Elimină stilul implicit */
+    height: 2px; /* Grosimea liniei */
+    background-color: #ccc; /* Culoarea liniei */
+    margin: 0; /* Elimină spațiile suplimentare */
+}
 
+******************************************************
 @media (min-width: 960px) {
     .header-container {
     padding-left: 40px;
