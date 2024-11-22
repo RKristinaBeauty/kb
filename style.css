@@ -14,7 +14,7 @@ hr {
     border: none; /* Elimină stilul implicit */
     height: 2px; /* Grosimea liniei */
     background-color: #ccc; /* Culoarea liniei */
-    margin: 0; /* Elimină spațiile suplimentare */
+    margin: 1px!important;
 }
 
 ******************************************************
