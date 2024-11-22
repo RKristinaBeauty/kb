@@ -92,6 +92,38 @@
         </div>
 </div>
     </section>
+        <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="close" id="closeLightbox">&times;</button>
+        <img src="" alt="Imagine mare" id="lightboxImage">
+    </div>
+         <script>
+        // Selectăm toate imaginile din galerie
+        const galleryImages = document.querySelectorAll('.galerie-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const closeLightbox = document.getElementById('closeLightbox');
+
+        // Adăugăm evenimentul de clic pe fiecare imagine
+        galleryImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex'; // Afișăm lightbox-ul
+                lightboxImage.src = image.src;  // Setăm sursa imaginii selectate
+            });
+        });
+
+        // Închidem lightbox-ul când se apasă butonul de închidere
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Închidem lightbox-ul când se face clic în afara imaginii
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImage && e.target !== closeLightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
     <div class="footer">
         <div class="footer-container">
             <p>&copy; 2024 Beauty Salon KristinaBeauty</p>
