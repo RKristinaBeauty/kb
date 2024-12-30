@@ -671,11 +671,13 @@ Menu hamburger
 }
 
 
-
+ .flex-sm-row {
+        justify-content: center!important;
+    }
 @media (min-width: 576px) {
     .flex-sm-row {
         flex-direction: row !important;
-
+        justify-content: center!important;
     }
 }
 @media (max-width: 959px) {
