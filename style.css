@@ -665,9 +665,9 @@ Menu hamburger
 }
 }
 .footer2 {
-    display: flex;
+    display: flex!important;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center!important;
 }
 
 
