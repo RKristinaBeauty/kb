@@ -541,7 +541,10 @@ ul.contact--socials {
 }
 .logo {
     height: auto;
-    width: 80%;
+    width: 200px;
+}
+.social-media h5 {
+    font-size: 16px;
 }
 }
 #galerie {
@@ -660,12 +663,12 @@ Menu hamburger
     margin-left: calc(-.5* var(--bs-gutter-x));
     justify-content: space-around!important;
 }
+}
 .footer2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
 
 
 
@@ -676,7 +679,6 @@ Menu hamburger
     }
 }
 @media (max-width: 959px) {
-
 .col-6 {
     flex: 0 0 auto;
     width: 50%;
@@ -693,6 +695,7 @@ Menu hamburger
     margin-left: 10px;
 }
 }
+
 .btn-primary {
     border-color: #A15407!important;
     color: #996600;
