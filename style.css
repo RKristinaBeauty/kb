@@ -551,8 +551,18 @@ ul.contact--socials {
     margin: 50px 200px; /* Spațiu exterior */
 }
 .contact {
-    margin: 50px 43%; /* Spațiu exterior */
+    margin: 50px 25%;
+    max-width: 650px;
+    height: 200px;
+    background-color: beige; /* Spațiu exterior */
 }
+#contact {
+    align-content: center;
+    text-align: center;
+}
+
+
+
 .list-servicii a {
     line-height: 1.8;
 }
