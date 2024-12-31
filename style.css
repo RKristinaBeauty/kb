@@ -550,19 +550,19 @@ ul.contact--socials {
 #galerie {
     margin: 50px 200px; /* Spațiu exterior */
 }
+#contact {
+   display: flex;
+   justify-content: center; /* Centrare orizontală */
+   align-items: center;    /* Centrare verticală */
+}
 .contact {
-    margin: 50px 25%;
+    margin: 50px;
+    width: 100%;
+    text-align: center;
     max-width: 650px;
     height: 200px;
     background-color: beige; /* Spațiu exterior */
 }
-#contact {
-    align-content: center;
-    text-align: center;
-}
-
-
-
 .list-servicii a {
     line-height: 1.8;
 }
