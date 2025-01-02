@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="KristinaBeauty oferă tatuaje estetice pentru buze, sprâncene și gene. Contactează-ne pentru o programare!">
-    <meta name="keywords" content="tatuaje buze, tatuaje sprâncene, vopsire sprancene, vopsire sprâncene, micropigmentare gene, tatuaje gene, salon tatuaje, extensii gene, laminare sprancene, laminare sprâncene, micropigmentare buze, beauty studio">
+    <meta name="keywords" content="tatuaje buze, tatuaje sprâncene, tatuaje gene, salon tatuaje, beauty studio">
     <title>Tatuaje Buze, Sprâncene și Gene</title>
-       <!-- Flickity CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css">
+    <!-- Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css">
+
+
+
+
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -24,20 +28,10 @@
                 margin: 0!important; /* Spațiu redus pe lateral */
             }
         }
-        #carousel {
-            height: 500px!important;
-        }
-        .carousel-control-next-icon, .carousel-control-prev-icon {
-            background-color: black!important;
-        }
-        .container-footer{
-            background-color: #dbcdb3!important;
-        }
     </style>
 
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <div class="container">
     <header>
         <div class="header-container">
@@ -49,7 +43,7 @@
             </div>
             <div class="header2">
             <h1>KristinaBeauty</h1>
-                <nav>
+                <nav class="menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="servicii.html">Servicii</a></li>
@@ -67,12 +61,11 @@
                         <li><a href="tel:017625178855" target="_blank" title="tel:017625178855" rel="noopener noreferrer"><img src="phone.svg" alt="Phone"></a></li>
                         <li><a href="https://www.instagram.com/kristina.rada_beauty/" target="_blank" title="https://www.instagram.com/kristina.rada_beauty/" rel="noopener noreferrer"><img src="instagram.svg" alt="Instagram"></a></li>
                     </ul>
-            </div>     
+            </div>    
         </div>
         </div>
     </header>
 
-        
     <section id="galerie">
     <h2>Galerie</h2>
     <p>Uită-te la lucrările noastre recente!</p>
@@ -104,9 +97,9 @@
         <div class="galerie-item">
             <img src="photo9.jpg" alt="Poză 9">
         </div>
-</div>
+    </div>
 </section>
-        
+
 <!-- Caruselul va fi generat dinamic de JavaScript -->
 <div id="carousel" class="carousel">
     <div class="carousel-content">
@@ -121,6 +114,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="container-footer">
   <footer class="py-5">
@@ -160,21 +154,19 @@
     </div> 
   </footer>
 </div>
-        
-<!-- New Year -->        
-<script>
-  const currentYear = new Date().getFullYear();
-  document.getElementById('currentYear').textContent = currentYear;
-</script> 
-        
-<!-- Menu Toggle -->
+<!-- Script Menu-Toggle -->
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function () {
         const menu = document.querySelector('.header2');
         menu.classList.toggle('active'); // Adaugă sau elimină clasa 'active'
     });
-</script> 
-        
+</script>
+<!-- Script Year -->
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById('currentYear').textContent = currentYear;
+</script>
+
 <!-- Flickity JS -->
 <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
 <script>
@@ -242,6 +234,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-        
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6773134eaf5bfec1dbe4d10c/1igco6qgt';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>
