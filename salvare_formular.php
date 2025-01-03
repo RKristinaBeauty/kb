@@ -21,7 +21,7 @@ try {
     $fisierInfo = [];
     if (isset($_FILES['atasare']) && $_FILES['atasare']['error'] === UPLOAD_ERR_OK) {
         $fisierNume = basename($_FILES['atasare']['name']);
-        $destinatie = 'uploads/' . uniqid() . '-' . $fisierNume;
+        $destinatie = uniqid() . '-' . $fisierNume;
 
         if (move_uploaded_file($_FILES['atasare']['tmp_name'], $destinatie)) {
             $fisierInfo = [
