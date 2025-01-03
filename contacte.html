@@ -85,6 +85,126 @@
             max-width: 1000px;
         }
     </style>
+
+<div class="contact-form">
+        <h2>Forma de Contact</h2>
+        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" enctype="multipart/form-data">
+            <!-- Row 1: Nume si Prenume -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nume">Nume</label>
+                    <input type="text" id="nume" name="nume" placeholder="Introdu" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenume">Prenume</label>
+                    <input type="text" id="prenume" name="prenume" placeholder="Introdu" required>
+                </div>
+            </div>
+            <!-- Row 2: Email si Numar de Telefon -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Introdu" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Numar de Telefon</label>
+                    <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="Introdu" required>
+                </div>
+            </div>
+            <!-- Comentarii -->
+            <div class="form-group">
+                <label for="comentarii">Comentarii</label>
+                <textarea id="comentarii" name="comentarii" rows="5" placeholder="Tasteaza" required></textarea>
+            </div>
+            <!-- Atasare de fisier -->
+            <div class="form-group">
+                <label for="atasare">Ataseaza un fisier</label>
+                <input type="file" id="atasare" name="atasare">
+            </div>
+            <!-- Captcha -->
+            <div class="captcha">
+                <label for="captcha">Suma 4 + 3 = ?</label>
+                <input type="text" id="captcha" name="captcha" placeholder="Introdu rezultatul" required>
+            </div>
+            <!-- Hidden Field for WordPress -->
+            <input type="hidden" name="action" value="procesare_formular_contact">
+            <!-- Butonul de trimitere -->
+            <button type="submit" class="submit-btn">Trimite</button>
+        </form>
+    </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2{
+            text-align: center;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: none;
+        }
+        .form-group input[type="file"] {
+            padding: 3px;
+        }
+        .captcha {
+            margin: 15px 0;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            transform: scale(1.05);
+            background-color: #000000;
+        }
+    </style>
+
+
+
+
+
+
+
+        
 <div class="container-footer">
   <footer class="py-5">
     <div class="footer1">
