@@ -43,26 +43,19 @@ app.post('/submit-form', upload.single('atasare'), (req, res) => {
     }
 
     const { nume, prenume, email, telefon, comentarii } = req.body;
-    let numeFisier = null;
-    let caleFisier = null;
-
-    // Procesare fișier încărcat (dacă există)
-    if (req.file) {
-        numeFisier = req.file.originalname || req.file.filename;
-        caleFisier = req.file.path;
+    
+    // Verifică câmpurile obligatorii
+    if (!nume || !prenume || !email || !telefon) {
+        return res.status(400).json({ error: 'Toate câmpurile sunt obligatorii.' });
     }
 
-    // Inserare în baza de date
-    const sql = `INSERT INTO contacte (nume, prenume, email, telefon, comentarii, nume_fisier, cale_fisier) 
-                 VALUES (?, ?, ?, ?, ?, ?, ?)`;
-    
+    // Restul codului...
     db.run(sql, [nume, prenume, email, telefon, comentarii, numeFisier, caleFisier], function(err) {
         if (err) {
             console.error('Eroare la inserare:', err);
             return res.status(500).json({ error: 'Eroare la salvarea datelor.' });
         }
         
-        console.log(`Date salvate cu ID: ${this.lastID}`);
         res.json({ 
             message: 'Mulțumim pentru mesaj! Vă vom contacta în cel mai scurt timp posibil.',
             status: 'success'
