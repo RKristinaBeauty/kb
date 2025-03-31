@@ -235,6 +235,12 @@
         const menu = document.querySelector('.header2');
         menu.classList.toggle('active'); // Adaugă sau elimină clasa 'active'
     });
+    </script>
+ <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        const menu = document.querySelector('.header2');
+        menu.classList.toggle('active'); // Adaugă sau elimină clasa 'active'
+    });
 </script>
 <script>
   const currentYear = new Date().getFullYear();
@@ -254,6 +260,56 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
- 
+
+<script>
+document.querySelector('.contact-form form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previne trimiterea clasică a formularului
+
+    const formData = new FormData(this); // Preia datele din formular
+
+    fetch('salvare_formular.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const message = document.createElement('div');
+        message.textContent = data.message;
+        message.style.color = data.status === 'success' ? 'green' : 'red';
+        document.querySelector('.contact-form').appendChild(message);
+
+        if (data.status === 'success') {
+            this.reset(); // Resetează formularul
+        }
+    })
+    .catch(error => {
+        console.error('Eroare:', error);
+        alert('A apărut o eroare. Încearcă din nou.');
+    });
+});
+</script>
+        
+<script>
+function submitForm() {
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+
+    fetch('/submit-form', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            alert(data.message);
+        } else {
+            alert('Eroare: ' + data.error);
+        }
+    })
+    .catch(error => alert('Eroare la trimitere: ' + error));
+}
+</script>
+
+        
 </body>
 </html>
