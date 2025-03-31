@@ -67,6 +67,45 @@
             <p>Email: <a href="mailto:RKristinaBeauty@yahoo.com">RKristinaBeauty@yahoo.com</a></p>
         </div>
     </selection>
+        <div class="contact-form">
+    <h2>Forma de Contact</h2>
+    <form id="contactForm" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nume">Nume</label>
+                <input type="text" id="nume" name="nume" placeholder="Introdu" required="">
+            </div>
+            <div class="form-group">
+                <label for="prenume">Prenume</label>
+                <input type="text" id="prenume" name="prenume" placeholder="Introdu" required="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Introdu" required="">
+            </div>
+            <div class="form-group">
+                <label for="telefon">Număr de Telefon</label>
+                <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="Introdu" required="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comentarii">Comentarii</label>
+            <textarea id="comentarii" name="comentarii" rows="5" placeholder="Tastează" required=""></textarea>
+        </div>
+        <div class="form-group">
+            <label for="atasare">Atașează un fișier</label>
+            <input type="file" id="atasare" name="atasare">
+        </div>
+        <div class="captcha">
+            <label for="captcha">Suma 4 + 3 = ?</label>
+            <input type="text" id="captcha" name="captcha" placeholder="Introdu rezultatul" required="">
+        </div>
+        <button type="button" class="submit-btn" onclick="submitForm()">Trimite</button>
+    </form>
+    <div id="responseMessage"><div class="success">Formular trimis cu succes!</div></div>
+    </div>
         <div class="map-container"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d5202.754391414644!2d8.42686988545709!3d49.30714000132253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4797b69c5da66f21%3A0x422d4d510db1bd0!2sSpeyer%2C%20Germania!3m2!1d49.3172765!2d8.441217199999999!5e0!3m2!1sro!2s!4v1730202909898!5m2!1sro!2s" width="600" height="450" allowfullscreen="allowfullscreen"></iframe>
         </div>
         <style>
