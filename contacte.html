@@ -310,39 +310,6 @@ function submitForm() {
 }
 </script>
 
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Verificare CAPTCHA
-    const captcha = document.getElementById('captcha').value;
-    if (captcha !== '7') {
-        alert('CAPTCHA incorect. Suma 4 + 3 trebuie să fie 7.');
-        return;
-    }
 
-    const formData = new FormData(this);
-    const responseMessage = document.getElementById('responseMessage');
-
-    fetch('salvare_formular.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        responseMessage.textContent = data.message;
-        responseMessage.style.color = data.status === 'success' ? 'green' : 'red';
-        
-        if (data.status === 'success') {
-            document.getElementById('contactForm').reset();
-        }
-    })
-    .catch(error => {
-        responseMessage.textContent = 'A apărut o eroare. Încearcă din nou.';
-        responseMessage.style.color = 'red';
-        console.error('Eroare:', error);
-    });
-});
-</script>
 </body>
 </html>
