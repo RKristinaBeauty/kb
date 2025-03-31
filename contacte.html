@@ -310,6 +310,33 @@ function submitForm() {
 }
 </script>
 
+<script>
+function submitForm() {
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+    const responseMessage = document.getElementById('responseMessage');
 
+    fetch('/submit-form', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            responseMessage.textContent = data.message;
+            responseMessage.style.color = 'green';
+            form.reset();
+        } else {
+            responseMessage.textContent = 'Eroare: ' + data.error;
+            responseMessage.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        responseMessage.textContent = 'Eroare la trimitere: ' + error;
+        responseMessage.style.color = 'red';
+    });
+}
+</script>
+        
 </body>
 </html>
